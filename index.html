@@ -121,48 +121,116 @@
     </div>
   </section>
 
-  <!-- Ablauf -->
-  <section class="section">
+  <!-- Warum Termine untergehen -->
+  <section class="section" id="warum">
     <div class="wrap">
-      <p class="eyebrow">So funktioniert es</p>
-      <h2>Vier Schritte. Der letzte gehört dir.</h2>
+      <p class="eyebrow">Der Kern des Problems</p>
+      <h2>Zwischen Zettel und Kalender liegen vier Bruchstellen.</h2>
+      <p class="lede" style="margin-top: var(--space-sm);">
+        Kaum jemand vergisst Termine, weil er schlecht organisiert ist. Die Kette reißt
+        an ganz bestimmten Stellen — und meistens immer an denselben.
+      </p>
 
-      <ol class="steps reveal" style="margin-top: var(--space-lg);">
+      <ol class="breaks reveal" style="margin-top: var(--space-lg);">
         <li>
           <div>
-            <h3>Fotografieren</h3>
-            <p>Dokument scannen oder ein vorhandenes Foto auswählen. Bis zu zehn Seiten in einem Durchgang.</p>
+            <h3>Der Zettel wird „gleich nachher“ eingetragen</h3>
+            <p>
+              Abtippen dauert zwei Minuten, aber selten hat man sie genau dann. Der
+              Zettel wandert auf den Stapel, und der Stapel wächst schneller, als man
+              ihn abarbeitet.
+            </p>
+            <p class="breaks__answer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Fotografieren dauert drei Sekunden
+            </p>
           </div>
         </li>
         <li>
           <div>
-            <h3>Lesen — auf deinem iPhone</h3>
-            <p>Die Texterkennung von Apple läuft lokal auf dem Gerät. Das Foto verlässt dein iPhone nicht und wird verworfen, sobald der Text ausgelesen ist.</p>
+            <h3>Beim Eintragen fehlt eine Angabe</h3>
+            <p>
+              Uhrzeit steht da, Ort nicht. Oder das Datum nennt einen Wochentag, der
+              nicht passt. Man legt den Zettel zurück, um „später nachzusehen“ — und
+              genau hier endet der Vorgang endgültig.
+            </p>
+            <p class="breaks__answer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Unklares wird markiert statt geraten
+            </p>
           </div>
         </li>
         <li>
           <div>
-            <h3>Vorschlagen</h3>
-            <p>Aus dem erkannten Text werden Termine und Erinnerungen. Jeder Vorschlag zeigt dir die Textstelle, aus der er stammt, und markiert, was unklar ist.</p>
+            <h3>Man traut dem eigenen Eintrag nicht</h3>
+            <p>
+              „War das wirklich 19:30?“ Wer sich nicht sicher ist, sucht den Zettel
+              wieder — oder erscheint sicherheitshalber zu früh. Ein Kalender, dem man
+              nicht traut, nimmt einem die Arbeit nicht ab.
+            </p>
+            <p class="breaks__answer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Jeder Vorschlag zeigt seine Textstelle
+            </p>
           </div>
         </li>
         <li>
           <div>
-            <h3>Du bestätigst</h3>
-            <p>Prüfen, korrigieren, bestätigen. Nichts wird automatisch übernommen — und solange etwas Wesentliches unklar bleibt, ist der Speichern-Knopf gesperrt.</p>
+            <h3>Der Termin steht drin — aber ohne Vorlauf</h3>
+            <p>
+              Das Geschenk hätte man drei Tage vorher besorgen müssen, der Zug wäre
+              früher zu buchen gewesen. Der Eintrag war richtig, nur zu spät sichtbar.
+            </p>
+            <p class="breaks__answer breaks__answer--none">
+              Teilweise: Hinweise sind voreingestellt, den nötigen Vorlauf kennst nur du
+            </p>
           </div>
         </li>
       </ol>
     </div>
   </section>
 
+  <!-- Ablauf -->
+  <section class="section section--sunken" id="ablauf">
+    <div class="wrap">
+      <p class="eyebrow">So funktioniert es</p>
+      <h2>Vier Schritte. Der letzte gehört dir.</h2>
+
+      <ol class="track reveal" style="margin-top: var(--space-xl);">
+        <li>
+          <span class="track__num">01</span>
+          <h3>Fotografieren</h3>
+          <p>Dokument scannen oder ein vorhandenes Foto auswählen. Bis zu zehn Seiten in einem Durchgang.</p>
+        </li>
+        <li>
+          <span class="track__num">02</span>
+          <h3>Lesen — auf deinem iPhone</h3>
+          <p>Die Texterkennung von Apple läuft lokal auf dem Gerät. Das Foto verlässt dein iPhone nicht und wird verworfen, sobald der Text ausgelesen ist.</p>
+        </li>
+        <li>
+          <span class="track__num">03</span>
+          <h3>Vorschlagen</h3>
+          <p>Aus dem erkannten Text werden Termine und Erinnerungen. Jeder Vorschlag zeigt die Textstelle, aus der er stammt, und markiert, was unklar ist.</p>
+        </li>
+        <li>
+          <span class="track__num">04</span>
+          <h3>Du bestätigst</h3>
+          <p>Prüfen, korrigieren, bestätigen. Nichts wird automatisch übernommen — und solange etwas Wesentliches unklar bleibt, ist der Speichern-Knopf gesperrt.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
   <!-- Datenschutz-Kern -->
-  <section class="section section--sunken">
-    <div class="wrap hero__grid">
-      <div>
+  <section class="section" id="daten">
+    <div class="wrap">
+      <div style="max-width: 22ch;">
         <p class="eyebrow">Deine Daten</p>
-        <h2>Das Foto bleibt auf deinem iPhone.</h2>
-        <div class="stack" style="margin-top: var(--space-sm);">
+      </div>
+      <h2 style="max-width: 16ch;">Das Foto bleibt auf deinem iPhone.</h2>
+
+      <div class="hero__grid" style="margin-top: var(--space-lg);">
+        <div class="stack">
           <p class="lede">
             Die meisten Scan-Apps laden dein Bild auf einen Server. ScanCal nicht. Die
             Texterkennung passiert auf deinem Gerät, und nur der erkannte Text wird zur
@@ -171,25 +239,57 @@
           <p style="color: var(--ink-soft);">
             Das ist kein Versprechen auf einer Marketingseite, sondern in der Software
             festgeschrieben: Der Bildweg ist in der Produktionskonfiguration gesperrt.
+            Ein Bild, das nie ankommt, kann auch nicht verloren gehen.
           </p>
           <p><a href="datenschutz-in-der-app.html">Ausführlich: was gesendet wird und was nicht</a></p>
         </div>
-      </div>
 
-      <div class="datalist reveal">
-        <p class="datalist__head">Was ScanCal verlässt dein Gerät</p>
-        <ul>
-          <li><svg class="no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>
-            <span><strong>Das Foto</strong> — bleibt auf dem Gerät, wird nach dem Auslesen verworfen</span></li>
-          <li><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-            <span><strong>Der erkannte Text</strong> — zur Auswertung an den ScanCal-Server und Mistral&nbsp;AI, Server in der EU</span></li>
-          <li><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-            <span><strong>Technische Angaben</strong> — Sprache, Zeitzone, Datum als Bezugspunkt</span></li>
-          <li><svg class="no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>
-            <span><strong>Kein Tracking, keine Werbung</strong> — und kein Verkauf von Daten</span></li>
-          <li><svg class="no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>
-            <span><strong>Kein Blick in deinen Kalender</strong> — ScanCal darf schreiben, nicht lesen</span></li>
-        </ul>
+        <div class="datalist reveal">
+          <p class="datalist__head">Was dein Gerät verlässt</p>
+          <ul>
+            <li><svg class="no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>
+              <span><span class="tag">bleibt hier</span><br><strong>Das Foto</strong> — wird nach dem Auslesen verworfen</span></li>
+            <li><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><span class="tag tag--yes">wird gesendet</span><br><strong>Der erkannte Text</strong> — an den ScanCal-Server und Mistral&nbsp;AI</span></li>
+            <li><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><span class="tag tag--yes">wird gesendet</span><br><strong>Technische Angaben</strong> — Sprache, Zeitzone, Datum als Bezugspunkt</span></li>
+            <li><svg class="no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>
+              <span><span class="tag">gibt es nicht</span><br><strong>Tracking und Werbung</strong> — auch kein Verkauf von Daten</span></li>
+            <li><svg class="no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>
+              <span><span class="tag">gibt es nicht</span><br><strong>Blick in deinen Kalender</strong> — ScanCal darf schreiben, nicht lesen</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Persönliche Notiz -->
+  <section class="section section--sunken" id="wer">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow">Wer das baut</p>
+      <div class="note reveal" style="margin-top: var(--space-md);">
+        <p>
+          ScanCal entsteht nicht in einem Unternehmen, sondern an einem Schreibtisch.
+          Angefangen hat es mit einem Stapel Elternbriefe und der immer gleichen
+          Erkenntnis: Der Termin stand da, ich hatte ihn sogar gelesen — er war nur nie
+          im Kalender gelandet.
+        </p>
+        <p>
+          Die erste Fassung lud Fotos auf einen Server, weil das der einfachere Weg ist.
+          Beim Nachdenken darüber, was auf so einem Elternbrief eigentlich alles steht —
+          Namen anderer Kinder, Adressen, manchmal Gesundheitliches — habe ich das
+          wieder umgebaut. Heute liest das iPhone den Text selbst, und nur dieser Text
+          geht weiter. Das war mehr Arbeit und ist die richtige Entscheidung.
+        </p>
+        <p>
+          Was ich nicht verspreche: dass die App alles versteht. Handschrift bleibt
+          schwierig, und manche Zettel sind auch für Menschen mehrdeutig. Deshalb
+          entscheidet am Ende immer jemand anders als die Software — nämlich du.
+        </p>
+        <p class="note__sign">
+          <strong><span class="ph">VOR- UND NACHNAME</span></strong>
+          <span>Entwickler von ScanCal</span>
+        </p>
       </div>
     </div>
   </section>

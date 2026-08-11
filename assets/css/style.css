@@ -565,6 +565,140 @@ a:hover { text-decoration-thickness: 2px; }
 .steps h3 { margin-bottom: 0.25rem; }
 .steps p { color: var(--ink-soft); font-size: 0.975rem; }
 
+/* --- Schrittspur ----------------------------------------------------------
+   Ziffern als zurückhaltende Marken auf einer durchgehenden Haarlinie statt
+   schwerer Kreise — ruhiger und näher an redaktioneller Gestaltung.
+   -------------------------------------------------------------------------- */
+.track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-lg) var(--space-md);
+  counter-reset: track;
+}
+@media (min-width: 700px) { .track { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .track { grid-template-columns: repeat(4, 1fr); gap: var(--space-md); } }
+
+.track li {
+  counter-increment: track;
+  position: relative;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--line-strong);
+}
+/* Der Punkt sitzt auf der Linie und markiert den Schritt. */
+.track li::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 4px var(--paper);
+}
+/* Letzter Schritt = deine Bestätigung. */
+.track li:last-child::before { background: var(--teal); }
+
+.track__num {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-2xs);
+}
+.track h3 { margin-bottom: 0.35rem; font-size: 1.15rem; }
+.track p { color: var(--ink-soft); font-size: 0.975rem; }
+
+/* --- Bruchstellen: warum Termine untergehen ------------------------------- */
+.breaks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+  counter-reset: brk;
+}
+.breaks li {
+  counter-increment: brk;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-sm) var(--space-md);
+  align-items: baseline;
+  padding-block: var(--space-md);
+  border-top: 1px solid var(--line);
+}
+.breaks li:last-child { border-bottom: 1px solid var(--line); }
+.breaks li::before {
+  content: counter(brk, decimal-leading-zero);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+}
+.breaks h3 { font-size: clamp(1.15rem, 1.05rem + 0.5vw, 1.35rem); margin-bottom: 0.3rem; }
+.breaks p { color: var(--ink-soft); max-width: 60ch; }
+.breaks__answer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: var(--space-xs);
+  padding: 0.3rem 0.75rem 0.3rem 0.6rem;
+  border-radius: var(--radius-full);
+  background: var(--teal-wash);
+  color: var(--teal-ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.breaks__answer svg { width: 15px; height: 15px; flex: none; }
+/* Ehrlich bleiben: was die App nicht löst, wird nicht grün eingefärbt. */
+.breaks__answer--none {
+  background: var(--paper-sunken);
+  color: var(--ink-soft);
+}
+
+/* --- Persönliche Notiz ---------------------------------------------------- */
+.note {
+  padding: var(--space-lg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper-raised);
+}
+@media (min-width: 700px) { .note { padding: var(--space-xl); } }
+.note p { max-width: 58ch; }
+.note p + p { margin-top: var(--space-sm); }
+.note__sign {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--line);
+}
+.note__sign strong { display: block; font-size: 1.05rem; }
+.note__sign span { color: var(--ink-soft); font-size: 0.9rem; }
+
+/* --- Marke auf Datenzeilen ------------------------------------------------ */
+.tag {
+  display: inline-block;
+  padding: 0.12rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-strong);
+  background: var(--paper-sunken);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.tag--yes {
+  border-color: color-mix(in srgb, var(--teal) 50%, transparent);
+  background: var(--teal-wash);
+  color: var(--teal-ink);
+}
+
 /* --- Datenblock: was tatsächlich gesendet wird ---------------------------- */
 .datalist {
   border: 1px solid var(--line);

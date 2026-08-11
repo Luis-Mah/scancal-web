@@ -13,7 +13,7 @@ Impressumspflicht nicht.
 
 | Platzhalter | Wo | Anmerkung |
 |---|---|---|
-| `VOR- UND NACHNAME` | Impressum, Datenschutz | |
+| `VOR- UND NACHNAME` | Impressum, Datenschutz, Startseite (Notiz) | |
 | `STRASSE HAUSNUMMER`, `PLZ ORT` | Impressum, Datenschutz | Ladungsfähige Anschrift; Postfach genügt nicht |
 | `KONTAKT-E-MAIL` | Impressum, Datenschutz, Kontakt | An allen drei Stellen dieselbe |
 | `TT.MM.JJJJ` | Datenschutz | Datum der Veröffentlichung |
