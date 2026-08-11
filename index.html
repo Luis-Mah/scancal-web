@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScanCal — Termine abfotografieren, du bestätigst</title>
+<meta name="description" content="ScanCal liest Termine aus Elternbriefen, Vereinszetteln und Einladungen — und schlägt sie dir vor. In den Kalender kommt nur, was du selbst bestätigst. Das Foto verlässt dein iPhone nicht.">
+<meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12161f" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://luis-mah.github.io/scancal-web/">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/logo-180.png">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibm-plex-sans-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="ScanCal">
+<meta property="og:title" content="ScanCal — Termine abfotografieren, du bestätigst">
+<meta property="og:description" content="Termine aus Zetteln in deinen Kalender. Die Texterkennung läuft auf deinem iPhone, das Foto verlässt das Gerät nicht.">
+<meta property="og:image" content="https://luis-mah.github.io/scancal-web/assets/img/logo-512.png">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo-180.png" width="30" height="30" alt="">
+      ScanCal
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hauptnavigation">
+      <span class="visually-hidden">Menü öffnen</span>
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <nav class="nav" id="hauptnavigation" aria-label="Hauptnavigation">
+      <a href="index.html" aria-current="page">Start</a>
+      <a href="funktionen.html">Funktionen</a>
+      <a href="datenschutz-in-der-app.html">Datenschutz</a>
+      <a href="faq.html">Fragen</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt">
+
+  <!-- Held -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="status"><span class="status__dot"></span> In Entwicklung — noch nicht im App&nbsp;Store</p>
+        <h1>Termine stehen überall. Nur nicht in deinem Kalender.</h1>
+        <p class="lede">
+          Der Zettel vom Sportverein, der Elternbrief, die Einladung. ScanCal liest die
+          Termine heraus und macht Vorschläge daraus. Was am Ende in deinem Kalender
+          landet, entscheidest du — jedes Mal.
+        </p>
+        <div class="btn-row" style="margin-top: var(--space-md);">
+          <a class="btn btn--primary" href="funktionen.html">So funktioniert es</a>
+          <a class="btn btn--ghost" href="datenschutz-in-der-app.html">Was mit deinen Daten passiert</a>
+        </div>
+        <p class="hero__note">
+          Für iPhone, ab iOS&nbsp;17. Die Texterkennung läuft direkt auf deinem Gerät —
+          das Foto selbst wird nie hochgeladen.
+        </p>
+      </div>
+
+      <!-- Gerätevorschau: als HTML gebaut, damit sie in jeder Auflösung scharf
+           bleibt, im Dunkelmodus mitgeht und keine Bilddatei kostet. -->
+      <div>
+        <div class="device" role="img" aria-label="Vorschau der App: ScanCal schlägt den Termin „Elternabend Klasse 3b“ am 14. März um 19:30 Uhr vor. Darunter die Textstelle aus dem Dokument und zwei Schaltflächen zum Verwerfen oder Bestätigen.">
+          <div class="device__notch" aria-hidden="true"></div>
+          <p class="device__label">Vorschlag prüfen</p>
+          <div class="suggest">
+            <p class="suggest__title">Elternabend Klasse 3b</p>
+            <p class="suggest__meta">Do., 14. März · 19:30–21:00 Uhr · Aula</p>
+            <p class="suggest__source">„… laden wir Sie herzlich zum Elternabend am 14.03. um 19:30 Uhr in die Aula ein …“</p>
+          </div>
+          <div class="device__actions" aria-hidden="true">
+            <span class="device__btn">Verwerfen</span>
+            <span class="device__btn device__btn--confirm">Bestätigen</span>
+          </div>
+          <p class="device__caption">Erst dieser Tipp schreibt in deinen Kalender.</p>
+        </div>
+
+        <ul class="legend">
+          <li><span class="swatch swatch--blue" aria-hidden="true"></span> Vorschlag der App</li>
+          <li><span class="swatch swatch--teal" aria-hidden="true"></span> Von dir bestätigt</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="section section--sunken">
+    <div class="wrap">
+      <p class="eyebrow">Das Problem</p>
+      <h2>Abtippen vergisst man. Zettel auch.</h2>
+      <p class="lede" style="margin-top: var(--space-sm);">
+        Termine kommen selten als Kalendereinladung. Sie kommen auf Papier, als Foto in
+        der Familiengruppe oder als Satz im Vorbeigehen.
+      </p>
+
+      <div class="grid reveal" style="margin-top: var(--space-lg);">
+        <article class="card">
+          <h3>Der Elternbrief</h3>
+          <p>Drei Termine in einem Absatz, zwei davon mit Uhrzeit. Bis zum Abtippen liegt der Zettel längst in der Schultasche.</p>
+        </article>
+        <article class="card">
+          <h3>Der Vereinszettel</h3>
+          <p>Trainingszeiten, Turniere, Mitgliederversammlung. Ein Aushang, den man einmal fotografiert und nie wieder ansieht.</p>
+        </article>
+        <article class="card">
+          <h3>Die Einladung</h3>
+          <p>Geburtstag, Hochzeit, Grillfest. Schön gestaltet — und ausgerechnet das Datum steht im Kleingedruckten.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ablauf -->
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">So funktioniert es</p>
+      <h2>Vier Schritte. Der letzte gehört dir.</h2>
+
+      <ol class="steps reveal" style="margin-top: var(--space-lg);">
+        <li>
+          <div>
+            <h3>Fotografieren</h3>
+            <p>Dokument scannen oder ein vorhandenes Foto auswählen. Bis zu zehn Seiten in einem Durchgang.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Lesen — auf deinem iPhone</h3>
+            <p>Die Texterkennung von Apple läuft lokal auf dem Gerät. Das Foto verlässt dein iPhone nicht und wird verworfen, sobald der Text ausgelesen ist.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Vorschlagen</h3>
+            <p>Aus dem erkannten Text werden Termine und Erinnerungen. Jeder Vorschlag zeigt dir die Textstelle, aus der er stammt, und markiert, was unklar ist.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Du bestätigst</h3>
+            <p>Prüfen, korrigieren, bestätigen. Nichts wird automatisch übernommen — und solange etwas Wesentliches unklar bleibt, ist der Speichern-Knopf gesperrt.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Datenschutz-Kern -->
+  <section class="section section--sunken">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="eyebrow">Deine Daten</p>
+        <h2>Das Foto bleibt auf deinem iPhone.</h2>
+        <div class="stack" style="margin-top: var(--space-sm);">
+          <p class="lede">
+            Die meisten Scan-Apps laden dein Bild auf einen Server. ScanCal nicht. Die
+            Texterkennung passiert auf deinem Gerät, und nur der erkannte Text wird zur
+            Auswertung weitergegeben.
+          </p>
+          <p style="color: var(--ink-soft);">
+            Das ist kein Versprechen auf einer Marketingseite, sondern in der Software
+            festgeschrieben: Der Bildweg ist in der Produktionskonfiguration gesperrt.
+          </p>
+          <p><a href="datenschutz-in-der-app.html">Ausführlich: was gesendet wird und was nicht</a></p>
+        </div>
+      </div>
+
+      <div class="datalist reveal">
+        <p class="datalist__head">Was ScanCal verlässt dein Gerät</p>
+        <ul>
+          <li><svg class="no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>
+            <span><strong>Das Foto</strong> — bleibt auf dem Gerät, wird nach dem Auslesen verworfen</span></li>
+          <li><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><strong>Der erkannte Text</strong> — zur Auswertung an den ScanCal-Server und Mistral&nbsp;AI, Server in der EU</span></li>
+          <li><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><strong>Technische Angaben</strong> — Sprache, Zeitzone, Datum als Bezugspunkt</span></li>
+          <li><svg class="no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>
+            <span><strong>Kein Tracking, keine Werbung</strong> — und kein Verkauf von Daten</span></li>
+          <li><svg class="no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>
+            <span><strong>Kein Blick in deinen Kalender</strong> — ScanCal darf schreiben, nicht lesen</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preis -->
+  <section class="section">
+    <div class="wrap wrap--narrow" style="text-align: center;">
+      <p class="eyebrow" style="justify-content: center;">Preis</p>
+      <h2>Ein Abo. Keine Werbung.</h2>
+      <div class="price" style="justify-content: center;">
+        <span class="price__amount"><span class="ph">Preis&nbsp;offen</span></span>
+        <span class="price__period">pro Monat</span>
+      </div>
+      <p class="lede" style="margin-inline: auto;">
+        Scannen und Chat sind im Abo enthalten. Abrechnung und Kündigung laufen über
+        deinen Apple-Account.
+      </p>
+      <div class="callout callout--todo" style="margin-top: var(--space-md); text-align: left;">
+        <strong>Noch zu ergänzen:</strong> Der endgültige Preis wird eingesetzt, sobald er
+        in App&nbsp;Store Connect feststeht. Vorher darf hier keine Zahl stehen —
+        eine falsche Preisangabe wäre abmahnfähig.
+      </div>
+    </div>
+  </section>
+
+  <!-- Abschluss -->
+  <section class="section section--sunken">
+    <div class="wrap wrap--narrow" style="text-align: center;">
+      <h2>Bald verfügbar</h2>
+      <p class="lede" style="margin: var(--space-sm) auto 0;">
+        ScanCal ist noch nicht im App&nbsp;Store. Wenn du Bescheid bekommen möchtest,
+        sobald es soweit ist, schreib mir eine kurze Nachricht.
+      </p>
+      <div class="btn-row" style="justify-content: center; margin-top: var(--space-md);">
+        <a class="btn btn--primary" href="kontakt.html">Kontakt aufnehmen</a>
+        <a class="btn btn--ghost" href="faq.html">Häufige Fragen</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/img/logo-180.png" width="30" height="30" alt="">
+          ScanCal
+        </a>
+        <p style="margin-top: var(--space-2xs); color: var(--ink-soft); max-width: 32ch;">
+          Termine aus Zetteln in deinen Kalender — mit deiner Bestätigung.
+        </p>
+      </div>
+      <div>
+        <h2>Produkt</h2>
+        <ul>
+          <li><a href="funktionen.html">Funktionen</a></li>
+          <li><a href="datenschutz-in-der-app.html">Datenschutz in der App</a></li>
+          <li><a href="faq.html">Häufige Fragen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Rechtliches</h2>
+        <ul>
+          <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <ul>
+          <li><a href="kontakt.html">Kontaktseite</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__base">
+      <p>© 2026 ScanCal</p>
+      <p>Diese Website verwendet keine Cookies und lädt nichts von fremden Servern.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

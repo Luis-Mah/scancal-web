@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luis-mah.github.io/scancal-web/sitemap.xml

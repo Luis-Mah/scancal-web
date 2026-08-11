@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutz in der App — ScanCal</title>
+<meta name="description" content="Was ScanCal mit deinen Daten macht, in verständlichen Worten: Das Foto bleibt auf dem iPhone, nur der erkannte Text wird ausgewertet, nichts wird dauerhaft gespeichert.">
+<meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12161f" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://luis-mah.github.io/scancal-web/datenschutz-in-der-app.html">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/logo-180.png">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="ScanCal">
+<meta property="og:title" content="Datenschutz in der App — ScanCal">
+<meta property="og:description" content="Das Foto bleibt auf deinem iPhone. Nur der erkannte Text wird ausgewertet. Hier steht genau, was passiert.">
+<meta property="og:image" content="https://luis-mah.github.io/scancal-web/assets/img/logo-512.png">
+</head>
+<body>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo-180.png" width="30" height="30" alt="">
+      ScanCal
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hauptnavigation">
+      <span class="visually-hidden">Menü öffnen</span>
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <nav class="nav" id="hauptnavigation" aria-label="Hauptnavigation">
+      <a href="index.html">Start</a>
+      <a href="funktionen.html">Funktionen</a>
+      <a href="datenschutz-in-der-app.html" aria-current="page">Datenschutz</a>
+      <a href="faq.html">Fragen</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt">
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <p class="eyebrow">Datenschutz in der App</p>
+      <h1>Was mit deinen Daten passiert — ohne Kleingedrucktes.</h1>
+      <p class="lede" style="margin-top: var(--space-sm);">
+        Diese Seite erklärt es in normalen Worten. Die juristische Fassung findest du in
+        der <a href="datenschutz.html">Datenschutzerklärung</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--tight section--sunken">
+    <div class="wrap">
+      <h2>Der Weg eines Zettels</h2>
+      <ol class="steps reveal" style="margin-top: var(--space-lg);">
+        <li>
+          <div>
+            <h3>Du fotografierst</h3>
+            <p>Das Bild liegt im Arbeitsspeicher deines iPhones. Es wird nicht in eine Datei geschrieben und nicht hochgeladen.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Dein iPhone liest den Text</h3>
+            <p>Die Texterkennung ist Teil von iOS und läuft vollständig auf dem Gerät. Danach wird das Bild verworfen.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Nur der Text geht raus</h3>
+            <p>Der erkannte Text wird an den ScanCal-Server und von dort an Mistral&nbsp;AI übermittelt, um daraus Termine zu erkennen. Das Foto selbst nie.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Der Vorschlag kommt zurück — und wird vergessen</h3>
+            <p>Du bekommst Terminvorschläge. Auf dem Server bleibt kein Inhalt dauerhaft liegen; zwischengespeicherte Antworten verfallen nach 15&nbsp;Minuten automatisch.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="hero__grid">
+        <div>
+          <p class="eyebrow">Ehrlich gesagt</p>
+          <h2>Warum wir das Foto nicht hochladen</h2>
+          <div class="stack" style="margin-top: var(--space-sm);">
+            <p>
+              Es wäre technisch einfacher, das Bild an einen Server zu schicken und dort
+              alles machen zu lassen. Genau das tun die meisten Scan-Apps.
+            </p>
+            <p style="color: var(--ink-soft);">
+              Ein Foto verrät aber viel mehr als der Text darauf: den Briefkopf, das
+              Layout, was daneben auf dem Tisch lag. Wer es nicht bekommt, kann es auch
+              nicht verlieren. Deshalb bleibt es auf dem Gerät — und der Bildweg ist in
+              der Produktionskonfiguration des Servers gesperrt, nicht nur „nicht
+              vorgesehen“.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout reveal">
+          <h3 style="margin-bottom: var(--space-2xs);">Trotzdem: Sei vorsichtig mit sensiblen Unterlagen</h3>
+          <p style="color: var(--ink-soft);">
+            Der erkannte Text kann nebenbei Dinge verraten, die besonders geschützt sind —
+            etwa zu Gesundheit, Religion oder Gewerkschaftszugehörigkeit. Ein Gemeindebrief
+            verrät die Konfession, ein Therapietermin die Gesundheit.
+          </p>
+          <p style="color: var(--ink-soft); margin-top: var(--space-xs);">
+            Deshalb sagt dir die App das vor der ersten Übermittlung ausdrücklich und rät
+            davon ab, solche Unterlagen zu scannen. ScanCal ist für private Alltagstermine
+            gedacht, nicht für medizinische Unterlagen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight section--sunken">
+    <div class="wrap">
+      <h2>Deine Kontrolle</h2>
+      <div class="grid" style="margin-top: var(--space-lg);">
+        <article class="card reveal">
+          <h3>Du entscheidest vorher</h3>
+          <p>Vor der ersten Übermittlung fragt die App ausdrücklich um Erlaubnis und sagt dabei, was gesendet wird und an wen. Ohne diese Zustimmung geht nichts raus.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Du kannst jederzeit widerrufen</h3>
+          <p>Ein Schalter in den Einstellungen — genauso einfach wie das Zustimmen. Danach übermittelt die App nichts mehr.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Ändert sich der Text, wird neu gefragt</h3>
+          <p>Erweitern wir, was verarbeitet wird, gilt die alte Zustimmung nicht weiter. Die App fragt dann erneut — mit dem neuen Text.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Du kannst dein Konto löschen</h3>
+          <p>Direkt in der App. Dabei wird auch die Anmeldeberechtigung bei Apple widerrufen und die Nutzungsdaten werden entfernt.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Der Kalender bleibt privat</h3>
+          <p>ScanCal fordert für den Kalender nur Schreibrechte an. Bestehende Termine kann die App technisch nicht lesen.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Du siehst, dass eine KI antwortet</h3>
+          <p>Im Chat steht dauerhaft ein Hinweis, dass die Antworten von einer KI stammen und Fehler enthalten können. Wie es die europäische KI-Verordnung verlangt.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <h2>Wer die Daten noch sieht</h2>
+      <div class="stack" style="margin-top: var(--space-sm);">
+        <p>
+          <strong>Mistral&nbsp;AI</strong> wertet den übermittelten Text aus. Das Unternehmen
+          arbeitet dabei als Auftragsverarbeiter — es darf die Daten nur für diesen Zweck
+          nutzen, nicht für eigene.
+        </p>
+        <p>
+          <strong>Apple</strong> ist für die Anmeldung und die Abrechnung zuständig. Zahlungsdaten
+          bekommt ScanCal nie zu sehen, nur die Auskunft, ob ein Abo aktiv ist.
+        </p>
+        <p style="color: var(--ink-soft);">
+          Alle Einzelheiten — Rechtsgrundlagen, Speicherfristen, deine Rechte — stehen in
+          der <a href="datenschutz.html">Datenschutzerklärung</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/img/logo-180.png" width="30" height="30" alt="">
+          ScanCal
+        </a>
+        <p style="margin-top: var(--space-2xs); color: var(--ink-soft); max-width: 32ch;">
+          Termine aus Zetteln in deinen Kalender — mit deiner Bestätigung.
+        </p>
+      </div>
+      <div>
+        <h2>Produkt</h2>
+        <ul>
+          <li><a href="funktionen.html">Funktionen</a></li>
+          <li><a href="datenschutz-in-der-app.html">Datenschutz in der App</a></li>
+          <li><a href="faq.html">Häufige Fragen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Rechtliches</h2>
+        <ul>
+          <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <ul>
+          <li><a href="kontakt.html">Kontaktseite</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__base">
+      <p>© 2026 ScanCal</p>
+      <p>Diese Website verwendet keine Cookies und lädt nichts von fremden Servern.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
