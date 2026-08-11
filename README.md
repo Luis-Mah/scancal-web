@@ -18,7 +18,6 @@ Impressumspflicht nicht.
 | `KONTAKT-E-MAIL` | Impressum, Datenschutz, Kontakt | An allen drei Stellen dieselbe |
 | `TT.MM.JJJJ` | Datenschutz | Datum der Veröffentlichung |
 | `USt-IdNr.` | Impressum | Nur falls erteilt, sonst Abschnitt löschen |
-| `Preis offen` | Startseite | Erst eintragen, wenn er in App Store Connect feststeht |
 | Verarbeitungsort Mistral | Datenschutz | Vertraglich bestätigen lassen |
 | Hosting-Anbieter des Servers | Datenschutz | Nach dem Deployment eintragen |
 
