@@ -66,7 +66,7 @@
         <li><a href="#app-server">Verarbeitung auf dem ScanCal-Server</a></li>
         <li><a href="#einwilligung">Einwilligung und Widerruf</a></li>
         <li><a href="#konto">Anmeldung und Konto</a></li>
-        <li><a href="#abo">Abonnement und Zahlungen</a></li>
+        <li><a href="#abo">Gratis-Tarif, Abonnement und Zahlungen</a></li>
         <li><a href="#speicherdauer">Speicherdauer</a></li>
         <li><a href="#empfaenger">Empfänger und Drittländer</a></li>
         <li><a href="#rechte">Deine Rechte</a></li>
@@ -184,9 +184,19 @@
 
     <h3>Nutzungskontingente</h3>
     <p>
-      Zur Kosten- und Missbrauchskontrolle zählt der Server je Konto und Kalendermonat
-      die Anzahl analysierter Seiten und Chat-Anfragen. Gespeichert werden nur
-      Zählerstände, keine Inhalte. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
+      Zur Kosten- und Missbrauchskontrolle zählt der Server je Konto und UTC-Kalendermonat
+      die Anzahl analysierter Seiten und Chat-Anfragen. Im Gratis-Tarif stehen 5 Seiten und
+      3 Chat-Anfragen je Monat zur Verfügung, mit ScanCal Pro entsprechend mehr.
+    </p>
+    <p>
+      Gespeichert werden nur die Zählerstände, der Kontingentmonat und ein stabiler,
+      mittels HMAC pseudonymisierter Prüfwert deiner Apple-Kennung — keine Inhalte und
+      nicht die Apple-Kennung im Klartext. Diese Pseudonymisierung macht den Datensatz
+      <strong>nicht anonym</strong>; er bleibt ein personenbezogenes Datum. Damit das
+      Gratis-Kontingent nicht durch Löschen und sofortiges Neuanlegen eines Kontos erneut
+      beansprucht werden kann, bleibt er auch nach einer Kontolöschung bis zum Ende des
+      laufenden Kontingentmonats bestehen und wird danach automatisch gelöscht
+      (siehe Abschnitt 7). Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
     </p>
 
     <h3>Technische Protokolle</h3>
@@ -240,17 +250,29 @@
     </ul>
     <p>
       <strong>Kontolöschung:</strong> direkt in den Einstellungen der App. Dabei widerruft der
-      Server das gespeicherte Apple-Token bei Apple, löscht Nutzungszähler und
-      Abo-Ansprüche und beendet alle Sitzungen. Ein laufendes Abonnement musst du
-      zusätzlich in deinem Apple-Account kündigen.
+      Server das gespeicherte Apple-Token bei Apple, löscht Konto- und Abo-Ansprüche und
+      beendet alle Sitzungen. Ein laufendes Abonnement musst du zusätzlich in deinem
+      Apple-Account kündigen.
+    </p>
+    <p>
+      Drei inhaltsfreie, pseudonyme Datensätze bleiben danach befristet bestehen: der
+      Kontingent-Datensatz aus Abschnitt 5 längstens bis zum Ende des laufenden
+      UTC-Kontingentmonats, damit das Gratis-Kontingent nicht durch Löschen und
+      sofortiges Neuanlegen eines Kontos erneut beansprucht werden kann; der
+      Einwilligungsnachweis bis zu drei Kalenderjahre nach seinem letzten Nachweis; ein
+      Sitzungssperrmerkmal höchstens 30 Tage, damit bereits ausgegebene Erneuerungs-Tokens
+      des gelöschten Kontos nicht wieder gültig werden. Zeitgesteuerte Löschläufe
+      entfernen sie nach Fristablauf.
     </p>
     <p>Rechtsgrundlage: Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
 
-    <h2 id="abo">8. Abonnement und Zahlungen</h2>
+    <h2 id="abo">8. Gratis-Tarif, Abonnement und Zahlungen</h2>
     <p>
-      Scannen und Chat setzen ein Abonnement voraus, das als In-App-Kauf über Apple
-      abgeschlossen wird. Die Zahlungsabwicklung erfolgt vollständig durch Apple.
-      ScanCal erhält keine Zahlungsdaten, sondern nur den Status deiner Berechtigung.
+      Scannen und Chat stehen bereits ohne Bezahlung zur Verfügung: Der Gratis-Tarif
+      umfasst 5 analysierte Seiten und 3 Chat-Anfragen je UTC-Kalendermonat. Das optionale
+      Abonnement ScanCal Pro erweitert das Kontingent und wird als In-App-Kauf über Apple
+      abgeschlossen. Die Zahlungsabwicklung erfolgt vollständig durch Apple. ScanCal
+      erhält keine Zahlungsdaten, sondern nur den Status deiner Berechtigung.
     </p>
     <p>
       Zur Prüfung übermittelt die App den von Apple signierten Kaufbeleg an den Server.
@@ -263,7 +285,7 @@
     <h2 id="speicherdauer">9. Speicherdauer</h2>
     <ul>
       <li><strong>Auf dem Gerät:</strong> Vorschläge und Chatverlauf bleiben, bis du sie löschst oder die App entfernst. Sitzungs-Tokens verfallen automatisch.</li>
-      <li><strong>Auf dem Server:</strong> keine dauerhafte Speicherung von Inhalten. Analyseantworten verfallen nach 900 Sekunden. Das Apple-Token wird bei Kontolöschung widerrufen und gelöscht. Nutzungszähler werden je Kalendermonat geführt. Der Einwilligungsnachweis wird für die Dauer der Verarbeitung gespeichert und danach nur so lange aufbewahrt, wie er zur Nachweisführung erforderlich ist (Art. 17 Abs. 3 lit. e DSGVO).</li>
+      <li><strong>Auf dem Server:</strong> keine dauerhafte Speicherung von Inhalten. Analyseantworten verfallen nach 900 Sekunden. Das Apple-Token wird bei Kontolöschung widerrufen und gelöscht. Der pseudonyme Kontingent-Datensatz wird je UTC-Kalendermonat geführt; wird das Konto im laufenden Monat gelöscht, bleibt er bis zum Monatsende bestehen und wird dann automatisch gelöscht. Der Einwilligungsnachweis wird für die Dauer der Verarbeitung gespeichert und danach nur so lange aufbewahrt, wie er zur Nachweisführung erforderlich ist (Art. 17 Abs. 3 lit. e DSGVO).</li>
       <li><strong>Bei Mistral AI:</strong> <span class="ph">VERARBEITUNGS- UND AUFBEWAHRUNGSDAUER VERTRAGLICH KLÄREN</span></li>
     </ul>
 
