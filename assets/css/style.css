@@ -780,7 +780,7 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .faq details > div > * + * { margin-top: var(--space-xs); }
 
-/* --- Hinweisblock (Platzhalter, rechtliche Warnungen) --------------------- */
+/* --- Hinweisblock ----------------------------------------------------------- */
 .callout {
   padding: var(--space-sm);
   border: 1px solid var(--line-strong);
@@ -789,31 +789,8 @@ a:hover { text-decoration-thickness: 2px; }
   background: var(--paper-raised);
   font-size: 0.975rem;
 }
-.callout--todo {
-  border-left-color: #b45309;
-  background: color-mix(in srgb, #b45309 7%, var(--paper-raised));
-}
-@media (prefers-color-scheme: dark) {
-  .callout--todo { border-left-color: #f59e0b; }
-}
 .callout strong { font-weight: 600; }
 
-/* Platzhalter, die der Betreiber noch ersetzen muss.
-   Kein `white-space: nowrap` — lange Platzhalter erzeugten sonst auf
-   schmalen Anzeigen waagerechtes Scrollen. */
-.ph {
-  padding: 0.1em 0.45em;
-  border-radius: 4px;
-  background: color-mix(in srgb, #b45309 16%, transparent);
-  border: 1px dashed #b45309;
-  font-weight: 600;
-  font-size: 0.95em;
-  overflow-wrap: anywhere;
-  hyphens: auto;
-}
-@media (prefers-color-scheme: dark) {
-  .ph { border-color: #f59e0b; background: color-mix(in srgb, #f59e0b 20%, transparent); }
-}
 
 /* --- Rechtstexte ---------------------------------------------------------- */
 .legal { max-width: var(--measure); }
@@ -824,6 +801,50 @@ a:hover { text-decoration-thickness: 2px; }
 .legal li + li { margin-top: 0.4rem; }
 .legal strong { color: var(--ink); font-weight: 600; }
 .legal address { font-style: normal; }
+/* Lange Adressen und Kennungen (URLs, Endpunkte) brechen statt zu überlaufen. */
+.legal { overflow-wrap: break-word; }
+.legal h4 { margin-top: var(--space-md); font-size: 1.1rem; }
+.legal .callout { margin-top: var(--space-sm); }
+.legal .callout p:first-child { margin-top: 0; }
+
+/* Sprachumschalter oben auf zweisprachigen Rechtsseiten. Echte Sprungmarken,
+   kein Skript: Die Seite bleibt ohne JavaScript vollständig nutzbar. */
+.lang-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  margin-top: var(--space-sm);
+}
+.lang-switch a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.35rem 1rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-full);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+.lang-switch a:hover { background: var(--paper-sunken); }
+.lang-switch a[aria-current="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+/* Zweite Sprachfassung unter der ersten: Titel als h2, Abschnitte als h3,
+   Unterabschnitte als h4 — optisch so groß wie in der ersten Fassung. */
+.legal-part--second {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--line);
+}
+.legal .legal-part__title { margin-top: 0; font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.6rem); }
+.legal .legal-part--second h3 { margin-top: var(--space-lg); font-size: clamp(1.35rem, 1.15rem + 0.8vw, 1.7rem); }
+.legal .legal-part--second h4 { margin-top: var(--space-md); font-size: 1.1rem; }
+.legal .legal-meta { margin-top: var(--space-sm); color: var(--ink-soft); }
 /* Kontaktadresse: eigenständiges Bedienelement, deshalb großzügig */
 .contact-mail {
   display: inline-flex;
